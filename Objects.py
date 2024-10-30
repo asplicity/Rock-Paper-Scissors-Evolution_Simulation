@@ -1,10 +1,9 @@
 from SETTINGS import *
 
 class Person():
-    def __init__(self, Group, Mutation_factor, Apples, age) -> None:
+    def __init__(self, Group, Mutation_factor, Apples) -> None:
         self.Group = Group
         self.Mutation_factor = Mutation_factor
-        self.age = age
         self.Apples = Apples
     
     def get_won(self, Guy, Enemy):
@@ -33,3 +32,5 @@ class Tree():
         elif self.Person_count == 2:
             self.People[0].get_won(self.People[0].Group, self.People[1].Group)
             self.People[1].get_won(self.People[1].Group, self.People[0].Group)
+        self.People = []
+        self.Person_count = 0
