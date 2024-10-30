@@ -10,9 +10,10 @@ class Person():
         
 class Tree():
     def __init__(self) -> None:
+        self.People = []
         self.Person_count = 0
-        self.Persons = []
+        
     
     def add_Person(self, Person):
+        self.People.append(Person)
         self.Person_count += 1
-        self.Persons.append(Person)
