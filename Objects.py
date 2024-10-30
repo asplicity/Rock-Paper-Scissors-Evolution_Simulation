@@ -12,8 +12,10 @@ class Person():
     def get_won(self, Guy, Enemy):
         if Guy == Enemy:
             self.Apples += 1
-        if Guy == ROCK and Enemy == SCISSORS or Guy == PAPER and Enemy == ROCK or Guy == SCISSORS and Enemy == PAPER:
+        elif Guy == ROCK and Enemy == SCISSORS or Guy == PAPER and Enemy == ROCK or Guy == SCISSORS and Enemy == PAPER:
             self.Apples += 2
+        else:
+            pass
         
 class Tree():
     def __init__(self) -> None:
@@ -30,6 +32,6 @@ class Tree():
             pass
         elif self.Person_count == 1:
             self.People[0].Apples += 2
-        else:
-            self.People[0].get_won(self.People[0], self.People[1])
-            self.People[1].get_won(self.People[1], self.People[0])
+        elif self.Person_count == 2:
+            self.People[0].get_won(self.People[0].Group, self.People[1].Group)
+            self.People[1].get_won(self.People[1].Group, self.People[0].Group)
