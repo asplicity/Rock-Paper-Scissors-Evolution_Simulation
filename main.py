@@ -4,11 +4,8 @@ import numpy as np
 import random as r
 import Objects
 import Round
+from SETTINGS import *
 
-Start_people = 9
-Mutation_factor = 0
-Tree_count = 15
-Days = 2
 
 def main():
     print("--Day 1--")

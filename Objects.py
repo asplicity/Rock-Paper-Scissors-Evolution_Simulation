@@ -1,6 +1,4 @@
-ROCK = 0
-PAPER = 1
-SCISSORS = 2
+from SETTINGS import *
 
 class Person():
     def __init__(self, Group, Mutation_factor, Apples, age) -> None:

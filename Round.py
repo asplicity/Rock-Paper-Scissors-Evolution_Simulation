@@ -11,7 +11,10 @@ def new_round(Trees: list[Objects.Tree], people: list[Objects.Person]) -> None:
         i.get_Winner()
 
 def new_Generation(people: list[Objects.Person]):
-    pass
+    children = []
+    for i in people:
+        for j in i.Apples:
+            children.append(Objects.Person(i.Group))
 
 if __name__ == "__main__":
     pass
