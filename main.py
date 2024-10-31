@@ -38,8 +38,8 @@ def main():
             People = Round.new_Generation(people=People)
         r.shuffle(People)
         Round.new_round(Trees=Trees,people=People)
-        for j in People:
-            print(f"{j.Apples}, {j.Group}")
+#       for j in People:
+#           print(f"{j.Apples}, {j.Group}")
         append_data(People=People, day=i)
     
     save_data()
