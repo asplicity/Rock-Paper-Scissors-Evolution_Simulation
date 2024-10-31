@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 from SETTINGS import *
 
 def analyze(path):
@@ -17,6 +18,7 @@ def analyze(path):
     plt.plot(Data["day"], Data["count_scissors"], label="scissors", color='green')
     plt.legend(loc='upper left')
     plt.savefig("diagrams/Evolution.png")
+    
     
     plt.cla()
     
