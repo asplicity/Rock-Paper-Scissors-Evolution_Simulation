@@ -11,13 +11,17 @@ Data = pd.DataFrame(columns=['day', 'count_people', 'count_rock', 'count_paper',
 
 
 def append_data(People: list, day):
+    
+    count_rock = sum(1 for i in People if i.Group == ROCK)
+    count_paper = sum(1 for i in People if i.Group == PAPER)
+    count_scissors = sum(1 for i in People if i.Group == SCISSORS)
 
     new_data = pd.DataFrame([{
         'day': day,
         'count_people': len(People),
-        'count_rock': sum(1 for i in People if i.Group == ROCK),
-        'count_paper': sum(1 for i in People if i.Group == PAPER),
-        'count_scissors': sum(1 for i in People if i.Group == SCISSORS)
+        'count_rock': count_rock / len(People),
+        'count_paper': count_paper / len(People),
+        'count_scissors': count_scissors / len(People)
     }])
     
     global Data

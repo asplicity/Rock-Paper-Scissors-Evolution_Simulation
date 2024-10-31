@@ -10,7 +10,7 @@ class Person():
         if Guy == Enemy:
             self.Apples += 1
         elif Guy == ROCK and Enemy == SCISSORS or Guy == PAPER and Enemy == ROCK or Guy == SCISSORS and Enemy == PAPER:
-            self.Apples += 2
+            self.Apples += 3
         else:
             pass
         

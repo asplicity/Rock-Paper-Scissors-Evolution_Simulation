@@ -8,12 +8,30 @@ def analyze(path):
     plt.title("population per day")
     plt.xlabel("Day")
     plt.ylabel("population")
-    plt.savefig("diagrams/day.png")
+    plt.savefig("diagrams/population.png")
     
     plt.cla()
     
-    plt.plot(Data["day"], Data["count_rock"], label="Rock")
-    plt.plot(Data["day"], Data["count_paper"], label="Paper")
-    plt.plot(Data["day"], Data["count_scissors"], label="scissors")
+    plt.plot(Data["day"], Data["count_rock"], label="Rock", color='gold')
+    plt.plot(Data["day"], Data["count_paper"], label="Paper", color='red')
+    plt.plot(Data["day"], Data["count_scissors"], label="scissors", color='green')
     plt.legend(loc='upper left')
     plt.savefig("diagrams/Evolution.png")
+    
+    plt.cla()
+    
+    plt.hist(Data["count_rock"])
+    plt.title("Histogram Rock")
+    plt.savefig("diagrams/Rock.png")
+    
+    plt.cla()
+    
+    plt.hist(Data["count_paper"])
+    plt.title("Histogram Paper")
+    plt.savefig("diagrams/Paper.png")
+    
+    plt.cla()
+    
+    plt.hist(Data["count_scissors"])
+    plt.title("Histogram Scissors")
+    plt.savefig("diagrams/Scissors.png")

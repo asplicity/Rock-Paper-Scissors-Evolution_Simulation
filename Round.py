@@ -1,3 +1,4 @@
+import random as r
 import Objects
 from SETTINGS import *
 
@@ -13,7 +14,10 @@ def new_Generation(people: list[Objects.Person]):
     children = []
     for i in people:
         for j in range(i.Apples):
-            children.append(Objects.Person(i.Group, Mutation_factor=Mutation_factor, Apples=0))
+            if round(r.random(), 2) > Mutation_factor:
+                children.append(Objects.Person(i.Group, Mutation_factor=Mutation_factor, Apples=0))
+            else:
+                children.append(Objects.Person(Group=r.randint(0, 2), Mutation_factor=Mutation_factor, Apples=0))
     return children
 
 if __name__ == "__main__":
